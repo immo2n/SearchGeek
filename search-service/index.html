@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Embedding Service</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Product Embedding Service</h1>
+        
+        <form id="productForm">
+            <label for="productData">Product Data (Name, Price, Category, etc.):</label><br>
+            <textarea id="productData" name="productData" rows="5" required placeholder="Enter product data here..."></textarea><br><br>
+
+            <button type="button" onclick="generateEmbedding()">Generate Embedding</button>
+            <button type="button" onclick="checkCount()">Check Count</button>
+            <button type="button" onclick="getAll()">Get All</button>
+
+            <pre id="lastSent"></pre>
+        </form>
+
+        <h2>Embedding Result:</h2>
+        <textarea id="embeddingResult" rows="10" cols="80" readonly></textarea>
+
+        <h2>Search Product Data</h2>
+        <label for="searchQuery">Search Query:</label><br>
+        <input type="text" id="searchQuery" name="searchQuery" placeholder="Enter search query..."><br><br>
+        <button type="button" onclick="searchDocuments()">Search</button>
+        
+        <h3>Search Results:</h3>
+        <pre id="searchResults"></pre>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+sentence-transformers
+chromadb
+
+torch==2.5.0
